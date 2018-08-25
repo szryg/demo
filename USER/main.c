@@ -113,6 +113,7 @@ int main(void)
 		currentDataPoint.valueSwitch_Custody = TaskMan_State.mode2;
 		currentDataPoint.valueTiming_Off = TaskMan_State.auto_shutdown/60;
 		currentDataPoint.valueTiming_Order_On = TaskMan_State.auto_start/60;
+
 		gizwitsHandle((dataPoint_t *)&currentDataPoint);
         EasyGUI_Loop();
 		TaskMan_Handler();
@@ -123,7 +124,7 @@ int main(void)
 			time123 = TaskMan_TIME_MS;
 			EXOUT_PutDat();
 		}
-		//printfl("zhuodu: %u\r\n",Get_zhuodu());
+		printf("zhuodu: %u\r\n",Get_zhuodu());
 	} 
 }
 
